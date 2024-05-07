@@ -7,7 +7,7 @@ ESC:            Hobbywing Platinum Pro 150A V5
 ESC Protocol:   PWM
 Telemetry Type: Hobbywing V5
 Motor:          Xnova Lightning 4025 1120kV
-RPM signal:     ESC Signal Wire
+RPM Signal:     ESC Signal Wire
 Cyclic Servos:  Nexspor CLS4027S
 Tail Servo:     Nexspor BLS4012T
 Main Blades:    Rotortech Ultimate 560
