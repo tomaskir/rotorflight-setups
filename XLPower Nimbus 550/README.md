@@ -12,6 +12,7 @@ Cyclic Servos:  Nexspor CLS4027S
 Tail Servo:     Nexspor BLS4012T
 Main Blades:    Rotortech Ultimate 560
 Tail Blades:    Rotortech Ultimate 93
+BEC:            ESC built-in 8.4V
 RX:             FD R24D
 RX Protocol:    CRSF
 Air Protocol:   ExpressLRS 500 (LoRA)
