@@ -12,7 +12,7 @@ Cyclic Servos:  Nexspor CLS2310S
 Tail Servo:     Nexspor CLS3507T
 Main Blades:    Align 380mm
 Tail Blades:    Align 74mm
-BEC:            FC built-in
+BEC:            FC built-in 7.2V
 RX:             Matek R24-D
 RX Protocol:    CRSF
 Air Protocol:   ExpressLRS 500 (LoRA)
