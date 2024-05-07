@@ -1,0 +1,203 @@
+# diff all
+
+# version
+# Rotorflight / STM32G47X (SG47) 4.3.0-RC2 Apr 15 2024 / 09:15:10 (ba6c7e3) MSP API: 12.6
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name MATEKG474HELI
+board_design RTFL
+manufacturer_id MTKS
+mcu_id 002b00515431500120343947
+signature 
+
+# name: 470LM
+
+# resources
+resource MOTOR 2 NONE
+resource LED_STRIP 1 NONE
+resource FREQ 1 NONE
+
+# dma
+dma pin A01 0
+# pin A01: DMA1 Channel 1 Request 57
+dma pin A06 NONE
+dma pin A07 NONE
+dma pin A15 NONE
+dma pin B00 NONE
+dma pin B01 NONE
+
+# feature
+feature GOVERNOR
+feature ESC_SENSOR
+feature DYN_NOTCH
+feature RPM_FILTER
+
+# serial
+serial 1 64 115200 57600 0 115200
+serial 2 1024 115200 57600 0 115200
+
+# servo
+servo 1 1535 -635 545 540 520 333 60 0
+servo 2 1520 -500 550 545 500 333 60 0
+servo 3 1560 -630 505 510 570 333 60 1
+servo 4 760 -310 280 300 270 560 30 0
+
+# mixer input
+mixer input SR -917 917 720
+mixer input SP -917 917 -720
+mixer input SY -1604 1500 -400
+mixer input SC -1167 1167 660
+
+# map
+map AECR1T23
+
+# aux
+aux 0 0 0 1950 2050 0 0
+aux 1 47 2 1950 2050 0 0
+aux 2 53 1 1950 2050 0 0
+aux 3 26 0 1950 2050 0 0
+aux 4 0 0 900 900 0 0
+aux 5 0 0 900 900 0 0
+aux 6 0 0 900 900 0 0
+aux 7 0 0 900 900 0 0
+aux 8 0 0 900 900 0 0
+aux 9 0 0 900 900 0 0
+aux 10 0 0 900 900 0 0
+aux 11 0 0 900 900 0 0
+aux 12 0 0 900 900 0 0
+aux 13 0 0 900 900 0 0
+aux 14 0 0 900 900 0 0
+aux 15 0 0 900 900 0 0
+aux 16 0 0 900 900 0 0
+aux 17 0 0 900 900 0 0
+aux 18 0 0 900 900 0 0
+aux 19 0 0 900 900 0 0
+
+# master
+set gyro_lpf2_static_hz = 0
+set dyn_notch_count = 2
+set dyn_notch_q = 25
+set dyn_notch_min_hz = 50
+set dyn_notch_max_hz = 280
+set acc_calibration = 22,-6,-12,1
+set mag_hardware = NONE
+set baro_hardware = NONE
+set blackbox_rate_denom = 1
+set blackbox_log_vbec = ON
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT300
+set main_rotor_gear_ratio = 11,121
+set tail_rotor_gear_ratio = 15,56
+set align_board_yaw = 180
+set bat_capacity = 1750
+set vbat_max_cell_voltage = 425
+set current_meter = ESC
+set battery_cell_count = 6
+set tail_center_trim = -75
+set swash_pitch_limit = 1750
+set swash_geo_correction = 35
+set gov_mode = MODE1
+set gov_startup_time = 80
+set gov_spoolup_time = 80
+set gov_tracking_time = 30
+set gov_recovery_time = 30
+set gov_autorotation_timeout = 300
+set gov_autorotation_bailout_time = 30
+set gov_zero_throttle_timeout = 100
+set gov_lost_headspeed_timeout = 50
+set gov_handover_throttle = 10
+set rc_max_throttle = 1950
+set pid_process_denom = 2
+set crsf_flight_mode_reuse = GOV_ADJFUNC
+set crsf_gps_heading_reuse = THROTTLE
+set crsf_gps_ground_speed_reuse = ESC_TEMP
+set crsf_gps_altitude_reuse = HEADSPEED
+set crsf_gps_sats_reuse = MCU_TEMP
+set telemetry_enable_heading = ON
+set telemetry_enable_altitude = ON
+set telemetry_enable_ground_speed = ON
+set debug_mode = GOVERNOR
+set debug_axis = 4
+set esc_sensor_protocol = BLHELI32
+set gyro_1_align_pitch = 1800
+set gyro_1_align_yaw = 1800
+set gyro_rpm_filter_bank_rpm_source = 10,11,12,13,21,22,0,0,0,0,0,0,0,0,0,0
+set gyro_rpm_filter_bank_rpm_ratio = 10000,10000,10000,10000,10000,10000,0,0,0,0,0,0,0,0,0,0
+set gyro_rpm_filter_bank_rpm_limit = 1500,1500,1500,1500,3000,3000,0,0,0,0,0,0,0,0,0,0
+set gyro_rpm_filter_bank_notch_q = 28,28,22,30,25,28,0,0,0,0,0,0,0,0,0,0
+set name = 470LM
+
+profile 0
+
+# profile 0
+set pitch_p_gain = 55
+set pitch_i_gain = 170
+set pitch_d_gain = 80
+set pitch_f_gain = 105
+set roll_p_gain = 40
+set roll_i_gain = 170
+set roll_d_gain = 65
+set roll_f_gain = 105
+set yaw_p_gain = 75
+set yaw_i_gain = 145
+set yaw_cyclic_ff_gain = 5
+set yaw_collective_ff_gain = 140
+set yaw_collective_dynamic_gain = 5
+set cyclic_cross_coupling_cutoff = 20
+set rescue_mode = CLIMB
+set gov_headspeed = 2800
+set gov_gain = 50
+set gov_p_gain = 45
+set gov_i_gain = 110
+set gov_f_gain = 20
+set gov_tta_limit = 0
+set gov_yaw_ff_weight = 10
+set gov_cyclic_ff_weight = 30
+set gov_collective_ff_weight = 80
+
+profile 1
+
+profile 2
+
+profile 3
+
+profile 4
+
+profile 5
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set rates_type = RACEFLIGHT
+set roll_rc_rate = 27
+set pitch_rc_rate = 27
+set yaw_rc_rate = 42
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set collective_srate = 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 
