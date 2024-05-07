@@ -18,5 +18,17 @@ RX Protocol:    CRSF
 Air Protocol:   ExpressLRS 500 (LoRA)
 ```
 
+# Connections
+```
+CH1:    Cyclic Servo
+CH2:    Cyclic Servo
+CH3:    Cyclic Servo
+CH4:    Tail Servo
+ESC:    ESC Throttle
+RPM-E:  ESC RPM Signal
+SBUS:   ESC Telemetry
+F.Port: Capacitor
+```
+
 # Status
 Tuning in progress
