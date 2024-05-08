@@ -1,7 +1,7 @@
 # Warp 360
 ```
-RF version:     2.0.0-RC2
-Chassis:        Warp 60
+RF version:     x
+Chassis:        Warp 360
 FC:             Matek G474-Heli
 ESC:            FlyColor X-Cross HV v3 60A
 ESC Protocol:   DSHOT300
