@@ -1,4 +1,7 @@
-# Warp 360
+# Status
+Conversion to RF not started yet.
+
+# Components
 ```
 RF version:     x
 Chassis:        Warp 360
@@ -30,6 +33,3 @@ TX2 - RX
 RX2 - RX
 VBat - Battery
 ```
-
-# Status
-Conversion to RF not started yet.
