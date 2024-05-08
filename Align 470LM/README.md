@@ -1,4 +1,7 @@
-# Align 470LM
+# Status
+Fully flyable under all conditions and manuevers.
+
+# Components
 ```
 RF version:     2.0.0-RC2
 Chassis:        470LM
@@ -30,9 +33,6 @@ TX2 - RX
 RX2 - RX
 VBat - Battery
 ```
-
-# Status
-Fully flyable under all conditions and manuevers.
 
 # Issues remaining
 - Gov is not yet fully tuned.
