@@ -15,7 +15,7 @@ Cyclic Servos:  Nexspor CLS4027S
 Tail Servo:     Nexspor BLS4012T
 Main Blades:    Azure Power 600
 Tail Blades:    Azure Power 105
-BEC:            Hobbywing UBEC 10A
+BEC:            Hobbywing UBEC 10A 8.4V
 RX:             FD R24D
 RX Protocol:    CRSF
 Air Protocol:   ExpressLRS 500 (LoRA)
