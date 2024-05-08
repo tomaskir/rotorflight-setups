@@ -10,10 +10,13 @@ TEMP_FILE="diff-all-$TIMESTAMP.txt"
 
 rm $TEMP_FILE &> /dev/null
 
+echo "screen -dmS $SESSION_NAME -L -Logfile $TEMP_FILE $SERIAL_PORT $BAUD_RATE"
 screen -dmS $SESSION_NAME -L -Logfile $TEMP_FILE $SERIAL_PORT $BAUD_RATE
-screen -S $SESSION_NAME -X stuff '#^M'
-screen -S $SESSION_NAME -X stuff 'diff all^M'
 sleep 2
+screen -S $SESSION_NAME -X stuff '#^M'
+sleep 2
+screen -S $SESSION_NAME -X stuff 'diff all^M'
+sleep 5
 
 screen -S $SESSION_NAME -X quit
 sleep 1
