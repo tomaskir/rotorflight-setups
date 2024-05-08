@@ -58,7 +58,7 @@ map AECR1T23
 
 # aux
 aux 0 0 0 1950 2050 0 0
-aux 1 47 2 1950 2050 0 0
+aux 1 47 3 1950 2050 0 0
 aux 2 53 1 1950 2050 0 0
 aux 3 26 0 1950 2050 0 0
 aux 4 0 0 900 900 0 0
@@ -78,6 +78,40 @@ aux 17 0 0 900 900 0 0
 aux 18 0 0 900 900 0 0
 aux 19 0 0 900 900 0 0
 
+# adjfunc
+adjfunc 0 2 2 950 2050 2 950 2050 1500 1500 0 1 3
+adjfunc 1 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 2 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 3 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 4 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 5 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 6 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 7 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 8 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 9 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 10 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 11 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 12 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 13 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 14 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 15 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 16 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 17 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 18 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 19 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 20 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 21 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 22 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 23 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 24 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 25 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 26 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 27 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 28 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 29 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 30 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+adjfunc 31 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
+
 # master
 set gyro_lpf2_static_hz = 0
 set dyn_notch_count = 2
@@ -86,7 +120,6 @@ set dyn_notch_min_hz = 50
 set dyn_notch_max_hz = 280
 set acc_calibration = 22,-6,-12,1
 set mag_hardware = NONE
-set baro_hardware = NONE
 set blackbox_rate_denom = 1
 set blackbox_log_vbec = ON
 set dshot_bidir = ON
@@ -149,6 +182,8 @@ set yaw_cyclic_ff_gain = 5
 set yaw_collective_ff_gain = 140
 set yaw_collective_dynamic_gain = 5
 set cyclic_cross_coupling_cutoff = 20
+set angle_level_limit = 45
+set acro_trainer_angle_limit = 45
 set rescue_mode = CLIMB
 set gov_headspeed = 2800
 set gov_gain = 50
@@ -162,7 +197,63 @@ set gov_collective_ff_weight = 80
 
 profile 1
 
+# profile 1
+set pitch_p_gain = 55
+set pitch_i_gain = 170
+set pitch_d_gain = 80
+set pitch_f_gain = 105
+set roll_p_gain = 40
+set roll_i_gain = 170
+set roll_d_gain = 65
+set roll_f_gain = 105
+set yaw_p_gain = 75
+set yaw_i_gain = 145
+set yaw_cyclic_ff_gain = 5
+set yaw_collective_ff_gain = 140
+set yaw_collective_dynamic_gain = 5
+set cyclic_cross_coupling_cutoff = 20
+set angle_level_limit = 45
+set acro_trainer_angle_limit = 45
+set rescue_mode = CLIMB
+set gov_headspeed = 2800
+set gov_gain = 50
+set gov_p_gain = 45
+set gov_i_gain = 110
+set gov_f_gain = 20
+set gov_tta_limit = 0
+set gov_yaw_ff_weight = 10
+set gov_cyclic_ff_weight = 30
+set gov_collective_ff_weight = 80
+
 profile 2
+
+# profile 2
+set pitch_p_gain = 55
+set pitch_i_gain = 170
+set pitch_d_gain = 80
+set pitch_f_gain = 105
+set roll_p_gain = 40
+set roll_i_gain = 170
+set roll_d_gain = 65
+set roll_f_gain = 105
+set yaw_p_gain = 75
+set yaw_i_gain = 145
+set yaw_cyclic_ff_gain = 5
+set yaw_collective_ff_gain = 140
+set yaw_collective_dynamic_gain = 5
+set cyclic_cross_coupling_cutoff = 20
+set angle_level_limit = 45
+set acro_trainer_angle_limit = 45
+set rescue_mode = CLIMB
+set gov_headspeed = 2800
+set gov_gain = 50
+set gov_p_gain = 45
+set gov_i_gain = 110
+set gov_f_gain = 20
+set gov_tta_limit = 0
+set gov_yaw_ff_weight = 10
+set gov_cyclic_ff_weight = 30
+set gov_collective_ff_weight = 80
 
 profile 3
 
