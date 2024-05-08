@@ -1,3 +1,6 @@
+# Status
+Tuning in progress
+
 # XLPower Nimbus 550
 ```
 RF version:     2.0.0-RC2
@@ -29,6 +32,3 @@ RPM-E:  ESC RPM Signal
 SBUS:   ESC Telemetry
 F.Port: Capacitor
 ```
-
-# Status
-Tuning in progress
