@@ -1,0 +1,153 @@
+# diff all
+
+# version
+# Rotorflight / STM32F7X2 (S7X2) 4.3.0-RC3 May 10 2024 / 11:46:20 (600b010) MSP API: 12.6
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name FLYDRAGONF722_V2
+board_design RTFL
+manufacturer_id FDRC
+mcu_id 0053002d3033511935383935
+signature 
+
+# name: Nimbus550
+
+# timer
+timer A00 AF1
+# pin A00: TIM2 CH1 (AF1)
+timer A01 AF2
+# pin A01: TIM5 CH2 (AF2)
+
+# dma
+dma pin A00 0
+# pin A00: DMA1 Stream 5 Channel 3
+dma pin A01 NONE
+dma pin C06 NONE
+dma pin C07 NONE
+dma pin C08 NONE
+dma pin C09 NONE
+
+# feature
+feature TELEMETRY
+feature GOVERNOR
+feature ESC_SENSOR
+feature FREQ_SENSOR
+feature DYN_NOTCH
+feature RPM_FILTER
+
+# serial
+serial 1 1024 115200 57600 0 115200
+
+# servo
+servo 1 1500 -700 700 500 500 333 70 0
+servo 2 1500 -700 700 500 500 333 70 0
+servo 3 1500 -700 700 500 500 333 70 0
+servo 4 750 -350 350 250 250 560 30 0
+
+# aux
+aux 0 0 0 1950 2050 0 0
+aux 1 47 3 1950 2050 0 0
+aux 2 53 1 1950 2050 0 0
+aux 3 26 0 1950 2050 0 0
+
+# adjfunc
+adjfunc 0 2 2 950 2050 2 950 2050 1500 1500 0 1 3
+
+# master
+set gyro_lpf2_static_hz = 0
+set dyn_notch_q = 25
+set dyn_notch_min_hz = 50
+set dyn_notch_max_hz = 250
+set acc_calibration = -8,22,55,1
+set baro_hardware = NONE
+set blackbox_rate_denom = 3
+set blackbox_log_vbec = ON
+set min_throttle = 1050
+set use_unsynced_pwm = ON
+set motor_pwm_rate = 200
+set main_rotor_gear_ratio = 13,106
+set tail_rotor_gear_ratio = 13,60
+set bat_capacity = 5800
+set vbat_max_cell_voltage = 425
+set current_meter = ESC
+set battery_meter = ESC
+set battery_cell_count = 6
+set gov_mode = MODE1
+set gov_startup_time = 80
+set gov_spoolup_time = 80
+set gov_tracking_time = 30
+set gov_recovery_time = 30
+set gov_autorotation_timeout = 300
+set gov_autorotation_bailout_time = 30
+set gov_zero_throttle_timeout = 100
+set gov_lost_headspeed_timeout = 50
+set gov_handover_throttle = 10
+set rc_max_throttle = 2000
+set crsf_flight_mode_reuse = GOV_ADJFUNC
+set crsf_gps_heading_reuse = THROTTLE
+set crsf_gps_ground_speed_reuse = ESC_TEMP
+set crsf_gps_altitude_reuse = HEADSPEED
+set crsf_gps_sats_reuse = MCU_TEMP
+set telemetry_enable_heading = ON
+set telemetry_enable_altitude = ON
+set telemetry_enable_ground_speed = ON
+set debug_mode = GOVERNOR
+set esc_sensor_protocol = HOBBYWINGV5
+set gyro_rpm_filter_bank_rpm_source = 10,11,12,13,21,22,0,0,0,0,0,0,0,0,0,0
+set gyro_rpm_filter_bank_rpm_ratio = 10000,10000,10000,10000,10000,10000,0,0,0,0,0,0,0,0,0,0
+set gyro_rpm_filter_bank_rpm_limit = 1500,1500,1500,1500,6000,6000,0,0,0,0,0,0,0,0,0,0
+set gyro_rpm_filter_bank_notch_q = 30,30,30,25,30,30,0,0,0,0,0,0,0,0,0,0
+set name = Nimbus550
+
+profile 0
+
+# profile 0
+set gov_headspeed = 2200
+
+profile 1
+
+profile 2
+
+profile 3
+
+profile 4
+
+profile 5
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set rates_type = RACEFLIGHT
+set roll_rc_rate = 27
+set pitch_rc_rate = 27
+set yaw_rc_rate = 42
+set collective_rc_rate = 52
+set roll_srate = 0
+set pitch_srate = 0
+set yaw_srate = 0
+set collective_srate = 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 
