@@ -44,13 +44,16 @@ feature RPM_FILTER
 serial 1 1024 115200 57600 0 115200
 
 # servo
-servo 1 1500 -700 700 500 500 333 70 1
-servo 2 1500 -700 700 500 500 333 70 1
-servo 3 1500 -700 700 500 500 333 70 1
-servo 4 750 -350 350 250 250 560 30 0
+servo 1 1470 -620 760 520 530 333 70 1
+servo 2 1570 -770 830 500 440 333 70 1
+servo 3 1565 -655 835 450 415 333 70 1
+servo 4 760 -130 190 250 250 560 30 0
 
 # mixer input
-mixer input SP -1000 1000 -1000
+mixer input SR -1250 1250 900
+mixer input SP -1250 1250 -900
+mixer input SY -1062 917 530
+mixer input SC -1167 1167 880
 
 # aux
 aux 0 0 0 1950 2050 0 0
@@ -81,6 +84,8 @@ set vbat_max_cell_voltage = 425
 set current_meter = ESC
 set battery_meter = ESC
 set battery_cell_count = 6
+set tail_center_trim = 271
+set swash_geo_correction = -25
 set gov_mode = MODE1
 set gov_startup_time = 300
 set gov_tracking_time = 30
@@ -91,6 +96,7 @@ set gov_zero_throttle_timeout = 100
 set gov_lost_headspeed_timeout = 50
 set gov_handover_throttle = 10
 set rc_max_throttle = 2000
+set pid_process_denom = 2
 set crsf_flight_mode_reuse = GOV_ADJFUNC
 set crsf_gps_heading_reuse = THROTTLE
 set crsf_gps_ground_speed_reuse = ESC_TEMP
@@ -110,11 +116,35 @@ set name = Nimbus550
 profile 0
 
 # profile 0
+set yaw_cyclic_ff_gain = 5
+set yaw_collective_ff_gain = 40
+set rescue_mode = CLIMB
+set rescue_pull_up_collective = 600
+set rescue_hover_collective = 300
 set gov_headspeed = 2200
+set gov_yaw_ff_weight = 5
 
 profile 1
 
+# profile 1
+set yaw_cyclic_ff_gain = 5
+set yaw_collective_ff_gain = 40
+set rescue_mode = CLIMB
+set rescue_pull_up_collective = 600
+set rescue_hover_collective = 300
+set gov_headspeed = 2200
+set gov_yaw_ff_weight = 5
+
 profile 2
+
+# profile 2
+set yaw_cyclic_ff_gain = 5
+set yaw_collective_ff_gain = 40
+set rescue_mode = CLIMB
+set rescue_pull_up_collective = 600
+set rescue_hover_collective = 300
+set gov_headspeed = 2200
+set gov_yaw_ff_weight = 5
 
 profile 3
 
