@@ -44,10 +44,13 @@ feature RPM_FILTER
 serial 1 1024 115200 57600 0 115200
 
 # servo
-servo 1 1500 -700 700 500 500 333 70 0
-servo 2 1500 -700 700 500 500 333 70 0
-servo 3 1500 -700 700 500 500 333 70 0
+servo 1 1500 -700 700 500 500 333 70 1
+servo 2 1500 -700 700 500 500 333 70 1
+servo 3 1500 -700 700 500 500 333 70 1
 servo 4 750 -350 350 250 250 560 30 0
+
+# mixer input
+mixer input SP -1000 1000 -1000
 
 # aux
 aux 0 0 0 1950 2050 0 0
@@ -68,6 +71,7 @@ set baro_hardware = NONE
 set blackbox_rate_denom = 3
 set blackbox_log_vbec = ON
 set min_throttle = 1050
+set max_throttle = 1950
 set use_unsynced_pwm = ON
 set motor_pwm_rate = 200
 set main_rotor_gear_ratio = 13,106
@@ -78,8 +82,7 @@ set current_meter = ESC
 set battery_meter = ESC
 set battery_cell_count = 6
 set gov_mode = MODE1
-set gov_startup_time = 80
-set gov_spoolup_time = 80
+set gov_startup_time = 300
 set gov_tracking_time = 30
 set gov_recovery_time = 30
 set gov_autorotation_timeout = 300
