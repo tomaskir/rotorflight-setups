@@ -35,7 +35,5 @@ VBat - Battery
 ```
 
 # Issues remaining
-- Gov is not yet fully tuned.
 - Small tail disturbances / jumps when jabbing cyclic / collective, likely related to gov and precomps. Nothing bad, but it is visible.
-- Small shakes on tictok stops. Likely too much I on cyclic.
 - Roll to pitch coupling. Likely just needs some coupling adjustment.
