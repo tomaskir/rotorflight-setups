@@ -1,7 +1,7 @@
 # diff all
 
 # version
-# Rotorflight / STM32G47X (SG47) 4.3.0-RC2 Apr 15 2024 / 09:15:10 (ba6c7e3) MSP API: 12.6
+# Rotorflight / STM32G47X (SG47) 4.3.0 May 15 2024 / 09:07:49 (05570fe) MSP API: 12.6
 
 # start the command batch
 batch start
