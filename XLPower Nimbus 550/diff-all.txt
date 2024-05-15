@@ -47,12 +47,12 @@ serial 1 1024 115200 57600 0 115200
 servo 1 1470 -620 760 520 530 333 70 1
 servo 2 1570 -770 830 500 440 333 70 1
 servo 3 1565 -655 835 450 415 333 70 1
-servo 4 760 -130 190 250 250 560 30 0
+servo 4 760 -200 250 250 250 560 30 0
 
 # mixer input
 mixer input SR -1250 1250 900
 mixer input SP -1250 1250 -900
-mixer input SY -1062 917 530
+mixer input SY -1417 917 530
 mixer input SC -1167 1167 880
 
 # aux
@@ -66,6 +66,7 @@ adjfunc 0 2 2 950 2050 2 950 2050 1500 1500 0 1 3
 
 # master
 set gyro_lpf2_static_hz = 0
+set dyn_notch_count = 3
 set dyn_notch_q = 25
 set dyn_notch_min_hz = 50
 set dyn_notch_max_hz = 250
@@ -107,10 +108,10 @@ set telemetry_enable_altitude = ON
 set telemetry_enable_ground_speed = ON
 set debug_mode = GOVERNOR
 set esc_sensor_protocol = HOBBYWINGV5
-set gyro_rpm_filter_bank_rpm_source = 10,11,12,13,21,22,0,0,0,0,0,0,0,0,0,0
-set gyro_rpm_filter_bank_rpm_ratio = 10000,10000,10000,10000,10000,10000,0,0,0,0,0,0,0,0,0,0
-set gyro_rpm_filter_bank_rpm_limit = 1500,1500,1500,1500,6000,6000,0,0,0,0,0,0,0,0,0,0
-set gyro_rpm_filter_bank_notch_q = 30,30,30,25,30,30,0,0,0,0,0,0,0,0,0,0
+set gyro_rpm_filter_bank_rpm_source = 10,11,12,13,14,21,22,0,0,0,0,0,0,0,0,0
+set gyro_rpm_filter_bank_rpm_ratio = 10000,10000,10000,10000,10000,10000,10000,0,0,0,0,0,0,0,0,0
+set gyro_rpm_filter_bank_rpm_limit = 1500,1500,1500,1500,1500,6000,6000,0,0,0,0,0,0,0,0,0
+set gyro_rpm_filter_bank_notch_q = 35,30,35,35,40,30,40,0,0,0,0,0,0,0,0,0
 set name = Nimbus550
 
 profile 0
@@ -138,11 +139,18 @@ set gov_yaw_ff_weight = 5
 profile 2
 
 # profile 2
+set pitch_i_gain = 120
+set pitch_d_gain = 40
+set pitch_f_gain = 110
+set roll_i_gain = 120
+set roll_d_gain = 30
+set roll_f_gain = 110
 set yaw_cyclic_ff_gain = 5
 set yaw_collective_ff_gain = 40
 set rescue_mode = CLIMB
 set rescue_pull_up_collective = 600
 set rescue_hover_collective = 300
+set rescue_max_sp_rate = 300
 set gov_headspeed = 2200
 set gov_yaw_ff_weight = 5
 
@@ -153,7 +161,7 @@ profile 4
 profile 5
 
 # restore original profile selection
-profile 0
+profile 2
 
 rateprofile 0
 
