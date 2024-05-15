@@ -50,7 +50,7 @@ servo 4 760 -310 280 300 270 560 30 0
 # mixer input
 mixer input SR -917 917 720
 mixer input SP -917 917 -720
-mixer input SY -1604 1500 -400
+mixer input SY -1583 1458 -400
 mixer input SC -1167 1167 660
 
 # map
