@@ -169,11 +169,11 @@ profile 0
 
 # profile 0
 set pitch_p_gain = 55
-set pitch_i_gain = 170
+set pitch_i_gain = 165
 set pitch_d_gain = 80
 set pitch_f_gain = 105
 set roll_p_gain = 40
-set roll_i_gain = 170
+set roll_i_gain = 165
 set roll_d_gain = 65
 set roll_f_gain = 105
 set yaw_p_gain = 75
@@ -185,25 +185,25 @@ set cyclic_cross_coupling_cutoff = 20
 set angle_level_limit = 45
 set acro_trainer_angle_limit = 45
 set rescue_mode = CLIMB
+set rescue_pull_up_time = 5
 set gov_headspeed = 2800
 set gov_gain = 50
-set gov_p_gain = 45
-set gov_i_gain = 110
-set gov_f_gain = 20
+set gov_i_gain = 100
+set gov_f_gain = 30
 set gov_tta_limit = 0
 set gov_yaw_ff_weight = 10
-set gov_cyclic_ff_weight = 30
+set gov_cyclic_ff_weight = 35
 set gov_collective_ff_weight = 80
 
 profile 1
 
 # profile 1
 set pitch_p_gain = 55
-set pitch_i_gain = 170
+set pitch_i_gain = 165
 set pitch_d_gain = 80
 set pitch_f_gain = 105
 set roll_p_gain = 40
-set roll_i_gain = 170
+set roll_i_gain = 165
 set roll_d_gain = 65
 set roll_f_gain = 105
 set yaw_p_gain = 75
@@ -215,25 +215,25 @@ set cyclic_cross_coupling_cutoff = 20
 set angle_level_limit = 45
 set acro_trainer_angle_limit = 45
 set rescue_mode = CLIMB
+set rescue_pull_up_time = 5
 set gov_headspeed = 2800
 set gov_gain = 50
-set gov_p_gain = 45
-set gov_i_gain = 110
-set gov_f_gain = 20
+set gov_i_gain = 100
+set gov_f_gain = 30
 set gov_tta_limit = 0
 set gov_yaw_ff_weight = 10
-set gov_cyclic_ff_weight = 30
+set gov_cyclic_ff_weight = 35
 set gov_collective_ff_weight = 80
 
 profile 2
 
 # profile 2
 set pitch_p_gain = 55
-set pitch_i_gain = 170
+set pitch_i_gain = 165
 set pitch_d_gain = 80
 set pitch_f_gain = 105
 set roll_p_gain = 40
-set roll_i_gain = 170
+set roll_i_gain = 165
 set roll_d_gain = 65
 set roll_f_gain = 105
 set yaw_p_gain = 75
@@ -245,14 +245,14 @@ set cyclic_cross_coupling_cutoff = 20
 set angle_level_limit = 45
 set acro_trainer_angle_limit = 45
 set rescue_mode = CLIMB
+set rescue_pull_up_time = 5
 set gov_headspeed = 2800
 set gov_gain = 50
-set gov_p_gain = 45
-set gov_i_gain = 110
-set gov_f_gain = 20
+set gov_i_gain = 100
+set gov_f_gain = 30
 set gov_tta_limit = 0
 set gov_yaw_ff_weight = 10
-set gov_cyclic_ff_weight = 30
+set gov_cyclic_ff_weight = 35
 set gov_collective_ff_weight = 80
 
 profile 3
