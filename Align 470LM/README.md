@@ -3,7 +3,7 @@ Fully flyable under all conditions and manuevers.
 
 # Components
 ```
-RF version:     2.0.0-RC2
+RF version:     2.0.0
 Chassis:        470LM
 FC:             Matek G474-Heli
 ESC:            FlyColor X-Cross HV v3 80A
