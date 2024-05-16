@@ -65,6 +65,8 @@ aux 3 26 0 1950 2050 0 0
 adjfunc 0 2 2 950 2050 2 950 2050 1500 1500 0 1 3
 
 # master
+set gyro_lpf1_type = NONE
+set gyro_lpf1_static_hz = 0
 set gyro_lpf2_static_hz = 0
 set dyn_notch_count = 3
 set dyn_notch_q = 25
@@ -88,7 +90,8 @@ set battery_cell_count = 6
 set tail_center_trim = 271
 set swash_geo_correction = -25
 set gov_mode = MODE1
-set gov_startup_time = 300
+set gov_startup_time = 450
+set gov_spoolup_time = 80
 set gov_tracking_time = 30
 set gov_recovery_time = 30
 set gov_autorotation_timeout = 300
@@ -108,50 +111,88 @@ set telemetry_enable_altitude = ON
 set telemetry_enable_ground_speed = ON
 set debug_mode = GOVERNOR
 set esc_sensor_protocol = HOBBYWINGV5
-set gyro_rpm_filter_bank_rpm_source = 10,11,12,13,14,21,22,0,0,0,0,0,0,0,0,0
-set gyro_rpm_filter_bank_rpm_ratio = 10000,10000,10000,10000,10000,10000,10000,0,0,0,0,0,0,0,0,0
-set gyro_rpm_filter_bank_rpm_limit = 1500,1500,1500,1500,1500,6000,6000,0,0,0,0,0,0,0,0,0
-set gyro_rpm_filter_bank_notch_q = 35,30,35,35,40,30,40,0,0,0,0,0,0,0,0,0
+set gyro_rpm_filter_bank_rpm_source = 10,11,12,13,14,15,21,22,0,0,0,0,0,0,0,0
+set gyro_rpm_filter_bank_rpm_ratio = 10000,10000,10000,10000,10000,10000,10000,10000,0,0,0,0,0,0,0,0
+set gyro_rpm_filter_bank_rpm_limit = 1500,1500,1500,1500,1500,1500,6000,6000,0,0,0,0,0,0,0,0
+set gyro_rpm_filter_bank_notch_q = 40,35,30,35,40,45,30,40,0,0,0,0,0,0,0,0
 set name = Nimbus550
 
 profile 0
 
 # profile 0
-set yaw_cyclic_ff_gain = 5
-set yaw_collective_ff_gain = 40
+set pitch_p_gain = 65
+set pitch_i_gain = 170
+set pitch_d_gain = 55
+set pitch_f_gain = 110
+set roll_p_gain = 75
+set roll_i_gain = 170
+set roll_d_gain = 70
+set roll_f_gain = 110
+set yaw_p_gain = 75
+set yaw_i_gain = 100
+set yaw_d_gain = 15
+set yaw_cyclic_ff_gain = 3
+set yaw_collective_ff_gain = 35
+set cyclic_cross_coupling_gain = 30
+set cyclic_cross_coupling_ratio = 5
 set rescue_mode = CLIMB
 set rescue_pull_up_collective = 600
 set rescue_hover_collective = 300
-set gov_headspeed = 2200
+set rescue_max_sp_rate = 300
+set gov_headspeed = 2300
+set gov_f_gain = 20
 set gov_yaw_ff_weight = 5
 
 profile 1
 
 # profile 1
-set yaw_cyclic_ff_gain = 5
-set yaw_collective_ff_gain = 40
+set pitch_p_gain = 65
+set pitch_i_gain = 170
+set pitch_d_gain = 55
+set pitch_f_gain = 110
+set roll_p_gain = 75
+set roll_i_gain = 170
+set roll_d_gain = 70
+set roll_f_gain = 110
+set yaw_p_gain = 75
+set yaw_i_gain = 100
+set yaw_d_gain = 15
+set yaw_cyclic_ff_gain = 3
+set yaw_collective_ff_gain = 35
+set cyclic_cross_coupling_gain = 30
+set cyclic_cross_coupling_ratio = 5
 set rescue_mode = CLIMB
 set rescue_pull_up_collective = 600
 set rescue_hover_collective = 300
-set gov_headspeed = 2200
+set rescue_max_sp_rate = 300
+set gov_headspeed = 2300
+set gov_f_gain = 20
 set gov_yaw_ff_weight = 5
 
 profile 2
 
 # profile 2
-set pitch_i_gain = 120
-set pitch_d_gain = 40
+set pitch_p_gain = 65
+set pitch_i_gain = 170
+set pitch_d_gain = 55
 set pitch_f_gain = 110
-set roll_i_gain = 120
-set roll_d_gain = 30
+set roll_p_gain = 75
+set roll_i_gain = 170
+set roll_d_gain = 70
 set roll_f_gain = 110
-set yaw_cyclic_ff_gain = 5
-set yaw_collective_ff_gain = 40
+set yaw_p_gain = 75
+set yaw_i_gain = 100
+set yaw_d_gain = 15
+set yaw_cyclic_ff_gain = 3
+set yaw_collective_ff_gain = 35
+set cyclic_cross_coupling_gain = 30
+set cyclic_cross_coupling_ratio = 5
 set rescue_mode = CLIMB
 set rescue_pull_up_collective = 600
 set rescue_hover_collective = 300
 set rescue_max_sp_rate = 300
-set gov_headspeed = 2200
+set gov_headspeed = 2300
+set gov_f_gain = 20
 set gov_yaw_ff_weight = 5
 
 profile 3
