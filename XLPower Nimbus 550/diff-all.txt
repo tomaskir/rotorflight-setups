@@ -1,7 +1,7 @@
 # diff all
 
 # version
-# Rotorflight / STM32F7X2 (S7X2) 4.3.0-RC3 May 10 2024 / 11:46:20 (600b010) MSP API: 12.6
+# Rotorflight / STM32F7X2 (S7X2) 4.3.0 May 15 2024 / 09:06:57 (05570fe) MSP API: 12.6
 
 # start the command batch
 batch start
@@ -138,7 +138,6 @@ set cyclic_cross_coupling_ratio = 5
 set rescue_mode = CLIMB
 set rescue_pull_up_collective = 600
 set rescue_hover_collective = 300
-set rescue_max_sp_rate = 300
 set gov_headspeed = 2300
 set gov_f_gain = 20
 set gov_yaw_ff_weight = 5
@@ -164,7 +163,6 @@ set cyclic_cross_coupling_ratio = 5
 set rescue_mode = CLIMB
 set rescue_pull_up_collective = 600
 set rescue_hover_collective = 300
-set rescue_max_sp_rate = 300
 set gov_headspeed = 2300
 set gov_f_gain = 20
 set gov_yaw_ff_weight = 5
@@ -190,7 +188,6 @@ set cyclic_cross_coupling_ratio = 5
 set rescue_mode = CLIMB
 set rescue_pull_up_collective = 600
 set rescue_hover_collective = 300
-set rescue_max_sp_rate = 300
 set gov_headspeed = 2300
 set gov_f_gain = 20
 set gov_yaw_ff_weight = 5
