@@ -1,9 +1,9 @@
 # Status
-Tuning in progress
+Fully flyable under all conditions and manuevers.
 
 # XLPower Nimbus 550
 ```
-RF version:     2.0.0-RC3
+RF version:     2.0.0
 Chassis:        Nimbus 550
 FC:             FlyDragon F722 v2
 ESC:            Hobbywing Platinum Pro 150A V5
