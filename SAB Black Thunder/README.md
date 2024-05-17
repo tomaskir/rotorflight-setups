@@ -1,7 +1,8 @@
 # Status
 Tuning in progress
 
-# XLPower Nimbus 550
+# SAB Black Thunder
+
 ```
 RF version:     2.0.0
 Chassis:        SAB Black Thunder
@@ -22,13 +23,25 @@ Air Protocol:   ExpressLRS 500 (LoRA)
 ```
 
 # Connections
+FC
 ```
-CH1:    Cyclic Servo
-CH2:    Cyclic Servo
-CH3:    Cyclic Servo
-CH4:    Tail Servo
-ESC:    ESC Throttle
-RPM-E:  ESC RPM Signal
-SBUS:   ESC Telemetry
-F.Port: Capacitor
+CH1:    Cyclic Servo (PWM)
+CH2:    Cyclic Servo (PWM)
+CH3:    Cyclic Servo (PWM)
+CH4:    Tail Servo (PWM)
+ESC:    ESC Throttle (DSHOT)
+RPM-E:  ESC Telemetry (UART)
+SBUS:   Light Control (PWM)
+F.Port: BEC (Power only)
+```
+
+BEC
+```
+Main Input: 12S Primary LiPo
+Backup Input: 2S Backup LiPo
+
+Input CH1: Light Control (to FC SBUS port)
+Input CH2: 2nd Power to FC (to FC F.Port port)
+
+Output CH1: Light Switch
 ```
