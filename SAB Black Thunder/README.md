@@ -30,9 +30,9 @@ CH2:    Cyclic Servo (PWM)
 CH3:    Cyclic Servo (PWM)
 CH4:    Tail Servo (PWM)
 ESC:    ESC Throttle (DSHOT)
-RPM-E:  ESC Telemetry (UART)
-SBUS:   Light Control (PWM)
-F.Port: BEC (Power only)
+RPM-E:  BEC (Power only)
+SBUS:   ESC Telemetry (UART)
+F.Port: Light Control (PWM)
 ```
 
 BEC
@@ -40,8 +40,7 @@ BEC
 Main Input: 12S Primary LiPo
 Backup Input: 2S Backup LiPo
 
-Input CH1: Light Control (to FC SBUS port)
-Input CH2: 2nd Power to FC (to FC F.Port port)
-
 Output CH1: Light Switch
+Output CH2: Light Control (to FC F.Port port)
+Output CH3: 2nd Power to FC (to FC RPM-E port)
 ```
