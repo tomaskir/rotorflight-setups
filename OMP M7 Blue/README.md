@@ -1,7 +1,7 @@
 # Status
 Tuning in progress
 
-# SAB Black Thunder
+# OMP M7 (Blue / Gold)
 
 ```
 RF version:     2.0.0
