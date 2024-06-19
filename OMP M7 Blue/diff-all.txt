@@ -47,11 +47,17 @@ feature RPM_FILTER
 serial 1 1024 115200 57600 0 115200
 
 # servo
-servo 1 1520 -700 700 500 500 333 60 0
-servo 2 1520 -700 700 500 500 333 60 0
-servo 3 1520 -700 700 500 500 333 60 0
-servo 4 760 -350 350 250 250 560 30 0
+servo 1 1560 -660 800 500 500 333 60 2
+servo 2 1560 -840 710 500 500 333 60 3
+servo 3 1480 -700 790 500 500 333 60 2
+servo 4 760 -350 350 250 250 560 30 3
 servo 5 1500 -700 700 500 500 50 0 0
+
+# mixer input
+mixer input SR -1250 1250 1025
+mixer input SP -1250 1250 -1025
+mixer input SY -1437 1250 -750
+mixer input SC -1083 1083 1050
 
 # aux
 aux 0 0 0 1950 2050 0 0
@@ -82,6 +88,9 @@ set bat_capacity = 5800
 set current_meter = ESC
 set battery_meter = ESC
 set battery_cell_count = 12
+set swash_roll_trim = -50
+set swash_collective_trim = 200
+set swash_geo_correction = -60
 set gov_mode = MODE1
 set gov_startup_time = 150
 set gov_spoolup_time = 80
