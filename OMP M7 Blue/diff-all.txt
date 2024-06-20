@@ -47,16 +47,16 @@ feature RPM_FILTER
 serial 1 1024 115200 57600 0 115200
 
 # servo
-servo 1 1560 -660 800 500 500 333 60 2
+servo 1 1560 -660 790 500 500 333 60 2
 servo 2 1560 -840 710 500 500 333 60 3
 servo 3 1480 -700 790 500 500 333 60 2
 servo 4 760 -350 350 250 250 560 30 3
 servo 5 1500 -700 700 500 500 50 0 0
 
 # mixer input
-mixer input SR -1250 1250 1025
-mixer input SP -1250 1250 -1025
-mixer input SY -1437 1250 -750
+mixer input SR -1000 1000 1025
+mixer input SP -1000 1000 -1025
+mixer input SY -1542 1167 -750
 mixer input SC -1083 1083 1050
 
 # aux
@@ -73,7 +73,9 @@ set gyro_lpf1_type = NONE
 set gyro_lpf1_static_hz = 0
 set gyro_lpf2_static_hz = 0
 set dyn_notch_count = 3
-set dyn_notch_q = 25
+set dyn_notch_q = 30
+set dyn_notch_min_hz = 30
+set dyn_notch_max_hz = 300
 set acc_calibration = -4,12,1,1
 set baro_hardware = NONE
 set blackbox_rate_denom = 2
@@ -88,8 +90,10 @@ set bat_capacity = 5800
 set current_meter = ESC
 set battery_meter = ESC
 set battery_cell_count = 12
+set tail_center_trim = -83
 set swash_roll_trim = -50
 set swash_collective_trim = 200
+set swash_pitch_limit = 1833
 set swash_geo_correction = -60
 set gov_mode = MODE1
 set gov_startup_time = 150
@@ -104,6 +108,7 @@ set gov_handover_throttle = 10
 set rc_arm_throttle = 1020
 set rc_min_throttle = 1050
 set rc_max_throttle = 2000
+set yaw_deadband = 5
 set pid_process_denom = 2
 set crsf_flight_mode_reuse = GOV_ADJFUNC
 set crsf_gps_heading_reuse = THROTTLE
@@ -116,50 +121,104 @@ set telemetry_enable_ground_speed = ON
 set debug_mode = GOVERNOR
 set debug_axis = 4
 set esc_sensor_protocol = BLHELI32
-set gyro_rpm_filter_bank_rpm_source = 10,11,12,13,14,21,22,23,0,0,0,0,0,0,0,0
-set gyro_rpm_filter_bank_rpm_ratio = 10000,10000,10000,10000,10000,10000,10000,10000,0,0,0,0,0,0,0,0
-set gyro_rpm_filter_bank_rpm_limit = 1250,1250,1250,1250,1250,5000,5000,5000,0,0,0,0,0,0,0,0
-set gyro_rpm_filter_bank_notch_q = 35,30,25,35,35,25,30,35,0,0,0,0,0,0,0,0
+set gyro_rpm_filter_bank_rpm_source = 10,11,12,13,14,21,22,0,0,0,0,0,0,0,0,0
+set gyro_rpm_filter_bank_rpm_ratio = 10000,10000,10000,10000,10000,10000,10000,0,0,0,0,0,0,0,0,0
+set gyro_rpm_filter_bank_rpm_limit = 1250,1250,1250,1250,1250,5000,5000,0,0,0,0,0,0,0,0,0
+set gyro_rpm_filter_bank_notch_q = 45,40,30,45,40,25,45,0,0,0,0,0,0,0,0,0
 set name = M7-Blue
 
 profile 0
 
 # profile 0
+set pitch_i_gain = 130
+set pitch_d_gain = 40
+set pitch_f_gain = 110
+set pitch_b_gain = 10
+set pitch_o_gain = 30
+set roll_i_gain = 130
+set roll_d_gain = 20
+set roll_f_gain = 110
+set roll_b_gain = 10
+set roll_o_gain = 30
+set yaw_p_gain = 65
+set yaw_i_gain = 80
+set yaw_cyclic_ff_gain = 1
+set yaw_collective_ff_gain = 35
 set rescue_mode = CLIMB
 set rescue_flip = ON
-set rescue_pull_up_collective = 700
+set rescue_pull_up_time = 5
+set rescue_exit_time = 10
+set rescue_pull_up_collective = 800
 set rescue_climb_collective = 600
 set rescue_hover_collective = 400
+set rescue_max_sp_rate = 250
+set rescue_max_sp_accel = 2500
 set gov_headspeed = 2000
-set gov_f_gain = 15
+set gov_gain = 45
+set gov_f_gain = 25
 set gov_yaw_ff_weight = 5
-set gov_collective_ff_weight = 105
 
 profile 1
 
 # profile 1
+set pitch_i_gain = 130
+set pitch_d_gain = 40
+set pitch_f_gain = 110
+set pitch_b_gain = 10
+set pitch_o_gain = 30
+set roll_i_gain = 130
+set roll_d_gain = 20
+set roll_f_gain = 110
+set roll_b_gain = 10
+set roll_o_gain = 30
+set yaw_p_gain = 65
+set yaw_i_gain = 80
+set yaw_cyclic_ff_gain = 1
+set yaw_collective_ff_gain = 35
 set rescue_mode = CLIMB
 set rescue_flip = ON
-set rescue_pull_up_collective = 700
+set rescue_pull_up_time = 5
+set rescue_exit_time = 10
+set rescue_pull_up_collective = 800
 set rescue_climb_collective = 600
 set rescue_hover_collective = 400
+set rescue_max_sp_rate = 250
+set rescue_max_sp_accel = 2500
 set gov_headspeed = 2000
-set gov_f_gain = 15
+set gov_gain = 45
+set gov_f_gain = 25
 set gov_yaw_ff_weight = 5
-set gov_collective_ff_weight = 105
 
 profile 2
 
 # profile 2
+set pitch_i_gain = 130
+set pitch_d_gain = 40
+set pitch_f_gain = 110
+set pitch_b_gain = 10
+set pitch_o_gain = 30
+set roll_i_gain = 130
+set roll_d_gain = 20
+set roll_f_gain = 110
+set roll_b_gain = 10
+set roll_o_gain = 30
+set yaw_p_gain = 65
+set yaw_i_gain = 80
+set yaw_cyclic_ff_gain = 1
+set yaw_collective_ff_gain = 35
 set rescue_mode = CLIMB
 set rescue_flip = ON
-set rescue_pull_up_collective = 700
+set rescue_pull_up_time = 5
+set rescue_exit_time = 10
+set rescue_pull_up_collective = 800
 set rescue_climb_collective = 600
 set rescue_hover_collective = 400
+set rescue_max_sp_rate = 250
+set rescue_max_sp_accel = 2500
 set gov_headspeed = 2000
-set gov_f_gain = 15
+set gov_gain = 45
+set gov_f_gain = 25
 set gov_yaw_ff_weight = 5
-set gov_collective_ff_weight = 105
 
 profile 3
 
@@ -168,7 +227,7 @@ profile 4
 profile 5
 
 # restore original profile selection
-profile 0
+profile 2
 
 rateprofile 0
 
