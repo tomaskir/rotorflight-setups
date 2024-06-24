@@ -1,5 +1,5 @@
 # Status
-Tuning in progress
+Fully flyable under all conditions and manuevers.
 
 # OMP M7 (Blue / Gold)
 
