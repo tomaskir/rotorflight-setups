@@ -1,5 +1,6 @@
 # Status
-Tuning in progress
+This is a night flying heli (blades an body are covered with LED strips), and as such copying this setup for a heli not converted for night flying is NOT recommended.
+Tuning in progress.
 
 # SAB Black Thunder
 
