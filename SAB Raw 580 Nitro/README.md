@@ -1,5 +1,5 @@
 # Status
-Heli flying, tuning needed.
+Tuning in progress.
 
 # Components
 ```
