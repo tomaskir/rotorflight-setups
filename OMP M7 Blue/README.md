@@ -14,8 +14,8 @@ Motor:          SunnySky 4530R 518KV
 RPM Signal:     Bi-Directional DSHOT
 Cyclic Servos:  Nexspor BLS4021S
 Tail Servo:     Nexspor BLS4012T
-Main Blades:    Testing (Azure / RotorTech / 1st)
-Tail Blades:    Testing (Azure / RotorTech / 1st)
+Main Blades:    Rotortech Ultimate 700
+Tail Blades:    Rotortech Ultimate 115
 BEC:            Hobbywing 10A 8.4V
 RX:             FD R24D
 RX Protocol:    CRSF
