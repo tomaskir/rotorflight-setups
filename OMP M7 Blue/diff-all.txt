@@ -130,25 +130,25 @@ profile 0
 
 # profile 0
 set pitch_p_gain = 100
-set pitch_i_gain = 115
-set pitch_d_gain = 80
+set pitch_i_gain = 155
+set pitch_d_gain = 75
 set pitch_f_gain = 105
 set pitch_b_gain = 10
 set pitch_o_gain = 30
 set roll_p_gain = 85
-set roll_i_gain = 125
-set roll_d_gain = 90
+set roll_i_gain = 165
+set roll_d_gain = 85
 set roll_f_gain = 105
 set roll_b_gain = 10
 set roll_o_gain = 30
-set yaw_p_gain = 90
-set yaw_i_gain = 150
+set yaw_p_gain = 85
+set yaw_i_gain = 145
 set yaw_d_gain = 30
 set yaw_ccw_stop_gain = 60
 set yaw_cyclic_ff_gain = 1
 set yaw_collective_ff_gain = 20
-set cyclic_cross_coupling_gain = 30
-set cyclic_cross_coupling_ratio = 15
+set cyclic_cross_coupling_gain = 35
+set cyclic_cross_coupling_ratio = 20
 set rescue_mode = CLIMB
 set rescue_flip = ON
 set rescue_pull_up_time = 5
@@ -158,36 +158,36 @@ set rescue_climb_collective = 600
 set rescue_hover_collective = 400
 set rescue_max_sp_rate = 250
 set rescue_max_sp_accel = 2500
-set gov_headspeed = 2000
+set gov_headspeed = 1800
 set gov_gain = 45
-set gov_p_gain = 50
+set gov_p_gain = 60
 set gov_d_gain = 5
-set gov_f_gain = 36
+set gov_f_gain = 35
 set gov_yaw_ff_weight = 15
 
 profile 1
 
 # profile 1
 set pitch_p_gain = 100
-set pitch_i_gain = 115
-set pitch_d_gain = 80
+set pitch_i_gain = 155
+set pitch_d_gain = 75
 set pitch_f_gain = 105
 set pitch_b_gain = 10
 set pitch_o_gain = 30
 set roll_p_gain = 85
-set roll_i_gain = 125
-set roll_d_gain = 90
+set roll_i_gain = 165
+set roll_d_gain = 85
 set roll_f_gain = 105
 set roll_b_gain = 10
 set roll_o_gain = 30
-set yaw_p_gain = 90
-set yaw_i_gain = 150
+set yaw_p_gain = 85
+set yaw_i_gain = 145
 set yaw_d_gain = 30
 set yaw_ccw_stop_gain = 60
 set yaw_cyclic_ff_gain = 1
 set yaw_collective_ff_gain = 20
-set cyclic_cross_coupling_gain = 30
-set cyclic_cross_coupling_ratio = 15
+set cyclic_cross_coupling_gain = 35
+set cyclic_cross_coupling_ratio = 20
 set rescue_mode = CLIMB
 set rescue_flip = ON
 set rescue_pull_up_time = 5
@@ -197,36 +197,36 @@ set rescue_climb_collective = 600
 set rescue_hover_collective = 400
 set rescue_max_sp_rate = 250
 set rescue_max_sp_accel = 2500
-set gov_headspeed = 2000
+set gov_headspeed = 1900
 set gov_gain = 45
-set gov_p_gain = 50
+set gov_p_gain = 60
 set gov_d_gain = 5
-set gov_f_gain = 36
+set gov_f_gain = 35
 set gov_yaw_ff_weight = 15
 
 profile 2
 
 # profile 2
 set pitch_p_gain = 100
-set pitch_i_gain = 115
-set pitch_d_gain = 80
+set pitch_i_gain = 155
+set pitch_d_gain = 75
 set pitch_f_gain = 105
 set pitch_b_gain = 10
 set pitch_o_gain = 30
 set roll_p_gain = 85
-set roll_i_gain = 125
-set roll_d_gain = 90
+set roll_i_gain = 165
+set roll_d_gain = 85
 set roll_f_gain = 105
 set roll_b_gain = 10
 set roll_o_gain = 30
-set yaw_p_gain = 90
-set yaw_i_gain = 150
+set yaw_p_gain = 85
+set yaw_i_gain = 145
 set yaw_d_gain = 30
 set yaw_ccw_stop_gain = 60
 set yaw_cyclic_ff_gain = 1
 set yaw_collective_ff_gain = 20
-set cyclic_cross_coupling_gain = 30
-set cyclic_cross_coupling_ratio = 15
+set cyclic_cross_coupling_gain = 35
+set cyclic_cross_coupling_ratio = 20
 set rescue_mode = CLIMB
 set rescue_flip = ON
 set rescue_pull_up_time = 5
@@ -238,9 +238,9 @@ set rescue_max_sp_rate = 250
 set rescue_max_sp_accel = 2500
 set gov_headspeed = 2000
 set gov_gain = 45
-set gov_p_gain = 50
+set gov_p_gain = 60
 set gov_d_gain = 5
-set gov_f_gain = 36
+set gov_f_gain = 35
 set gov_yaw_ff_weight = 15
 
 profile 3
@@ -250,7 +250,7 @@ profile 4
 profile 5
 
 # restore original profile selection
-profile 2
+profile 0
 
 rateprofile 0
 
